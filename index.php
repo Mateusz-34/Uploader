@@ -24,3 +24,11 @@ header('Content type: text/html; charset=UTF-8');
 
     </body>
 </html>
+
+<?php
+
+function prepareFilename($filename){
+    $result = mb_strtolower($filename,'UTF-8');
+    $result = str_replace(array('ą','ę','ć'),array('a','e','c'),$result);
+    $result = str_replace(' ','_',$result)
+}
